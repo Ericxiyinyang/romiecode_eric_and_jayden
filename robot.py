@@ -23,9 +23,8 @@ class MyRobot(wp.TimedRobot):
 
     def autonomousPeriodic(self):
         '''This is called every cycle while the robot is in autonomous.'''
-        while True:
-            self.linefollower.run()
-            time.sleep(0.3)
+        self.linefollower.run()
+        time.sleep(0.3)
 
     def teleopInit(self):
         '''This is called once at the start of Teleop.'''

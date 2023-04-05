@@ -2,8 +2,8 @@ from wpilib import DigitalInput
 
 class LineFollower:
     def __init__(self, drivetrain):
-        self.left_sensor = DigitalInput(8)
-        self.right_sensor = DigitalInput(9)
+        self.left_sensor = DigitalInput(9)
+        self.right_sensor = DigitalInput(8)
         self.drivetrain = drivetrain
 
     def run(self):
