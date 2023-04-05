@@ -2,7 +2,6 @@ import wpilib as wp
 import os
 from drivetrain import DriveTrain as DT
 from linefollwer import LineFollower as LF
-import time
 
 class MyRobot(wp.TimedRobot):
     def robotInit(self):
@@ -24,7 +23,6 @@ class MyRobot(wp.TimedRobot):
     def autonomousPeriodic(self):
         '''This is called every cycle while the robot is in autonomous.'''
         self.linefollower.run()
-        time.sleep(0.3)
 
     def teleopInit(self):
         '''This is called once at the start of Teleop.'''
@@ -34,6 +32,8 @@ class MyRobot(wp.TimedRobot):
         '''This is called once every cycle during Teleop'''
         forward = self.controller.getRawAxis(0)
         rotate = self.controller.getRawAxis(1)
+        print(forward)
+        print(rotate)
         self.drivetrain.move(forward, rotate)
 
     ### There are other methods that you can overwrite for when the robot is
