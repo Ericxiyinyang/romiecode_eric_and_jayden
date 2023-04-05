@@ -11,11 +11,11 @@ class LineFollower:
         right_data = self.right_sensor.get()
         print(left_data, right_data)
         if left_data and not right_data:
-            print("leftREAD")
+            # print("leftREAD")
             self.drivetrain.move(-0.6, 0.4)
         elif right_data and not left_data:
-            print("rightREAD")
+            # print("rightREAD")
             self.drivetrain.move(0.6, 0.4)
         else:
-            print("bothREAD")
+            # print("bothREAD")
             self.drivetrain.move(0, 0.4)

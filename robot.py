@@ -32,8 +32,8 @@ class MyRobot(wp.TimedRobot):
         '''This is called once every cycle during Teleop'''
         forward = self.controller.getRawAxis(0)
         rotate = self.controller.getRawAxis(1)
-        print(forward)
-        print(rotate)
+        # print(forward)
+        # print(rotate)
         self.drivetrain.move(forward, rotate)
 
     ### There are other methods that you can overwrite for when the robot is
